@@ -141,7 +141,7 @@ class VNR_reader:
 if __name__ == '__main__':
 	# start_date = str(input('Введите дату начала формирования базы данных: DD.MM.YY\n'))
 	print('Начинаем работу')
-	path_VNR_GPN = r'C:\Users\Shakin.VYu\Desktop\Сводки\ВНР ГПН-Восток.xlsx'
+	path_VNR_GPN = r'C:\Users\Shakin.VYu\Desktop\Сводки\ВНР Company.xlsx'
 	# path_VNR_GPN = r'C:\Users\Shakin.VYu\Desktop\ВНР.xlsx'
 	# path_VNR_Base = r'C:\Users\Shakin.VYu\Desktop\База данных ВНР.xlsx'
 	path_VNR_Base = r'C:\Users\Shakin.VYu\Desktop\База данных ВНР.xlsx'
