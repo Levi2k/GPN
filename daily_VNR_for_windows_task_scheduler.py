@@ -3,14 +3,14 @@ from openpyxl import Workbook, load_workbook
 from pprint36 import pprint
 class VNR_reader:
 
-	def __init__(self, path_VNR_GPN, path_VNR_Base):
-		self.path_VNR_GPN = path_VNR_GPN
+	def __init__(self, path_VNR_Company, path_VNR_Base):
+		self.path_VNR_Company = path_VNR_Company
 		self.path_base = path_VNR_Base
 		self.data = {}
 	
 	def load_vnr(self):
 		print('Подгружаю данные')
-		self.wb_vnr = load_workbook(self.path_VNR_GPN, data_only = True)
+		self.wb_vnr = load_workbook(self.path_VNR_Company, data_only = True)
 		self.sheets = self.wb_vnr.sheetnames
 		print(self.sheets[-1])
 		print('Данные загружены, приступаю к обработке')
@@ -141,9 +141,9 @@ class VNR_reader:
 if __name__ == '__main__':
 	# start_date = str(input('Введите дату начала формирования базы данных: DD.MM.YY\n'))
 	print('Начинаем работу')
-	path_VNR_GPN = r'C:\Users\Shakin.VYu\Desktop\Сводки\ВНР Company.xlsx'
-	# path_VNR_GPN = r'C:\Users\Shakin.VYu\Desktop\ВНР.xlsx'
+	path_VNR_Company = r'C:\Users\Shakin.VYu\Desktop\Сводки\ВНР Company.xlsx'
+	# path_VNR_Company = r'C:\Users\Shakin.VYu\Desktop\ВНР.xlsx'
 	# path_VNR_Base = r'C:\Users\Shakin.VYu\Desktop\База данных ВНР.xlsx'
 	path_VNR_Base = r'C:\Users\Shakin.VYu\Desktop\База данных ВНР.xlsx'
-	VNR_reader = VNR_reader(path_VNR_GPN, path_VNR_Base)
+	VNR_reader = VNR_reader(path_VNR_Company, path_VNR_Base)
 	VNR_reader.main()
